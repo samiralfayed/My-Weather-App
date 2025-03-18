@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+
+<h:head>
+    <title>Weather Result</title>
+</h:head>
+
+<h:body>
+    <h2>Weather Details</h2>
+
+    <h:panelGrid columns="2">
+        <h:outputLabel value="Temperature: "/>
+        <h:outputText value="#{weatherBean.weatherData.temperature}°C"/>
+
+        <h:outputLabel value="Humidity: "/>
+        <h:outputText value="#{weatherBean.weatherData.humidity}%"/>
+
+        <h:outputLabel value="Wind Speed: "/>
+        <h:outputText value="#{weatherBean.weatherData.windSpeed} km/h"/>
+
+        <h:outputLabel value="Pressure: "/>
+        <h:outputText value="#{weatherBean.weatherData.pressure} hPa"/>
+
+        <h:outputLabel value="Condition: "/>
+        <h:outputText value="#{weatherBean.weatherData.condition}"/>
+    </h:panelGrid>
+
+    <h:link outcome="index.xhtml" value="Search Again"/>
+</h:body>
+</html>
